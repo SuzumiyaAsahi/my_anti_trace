@@ -3,11 +3,7 @@
 
 use core::ffi::c_long;
 
-use aya_ebpf::{
-    helpers::{bpf_get_current_pid_tgid, bpf_get_current_task, gen::bpf_send_signal},
-    macros::tracepoint,
-    programs::TracePointContext,
-};
+use aya_ebpf::{helpers::bpf_get_current_task, macros::tracepoint, programs::TracePointContext};
 use aya_log_ebpf::info;
 mod vmlinux;
 use vmlinux::task_struct;
